@@ -1,0 +1,81 @@
+@import "tailwindcss";
+
+@theme {
+  --color-retail-dark: #17212B;
+  --color-retail-orange: #E85D2A;
+  --color-retail-orange-hover: #D04E1D;
+  --color-retail-bg: #F5F5F2;
+  --color-retail-surface: #FFFFFF;
+  --color-retail-text: #20252B;
+  --color-retail-muted: #69727C;
+  --color-retail-border: #E2E5E8;
+  --color-retail-green: #237A4B;
+  --color-retail-amber: #D97706;
+  --color-retail-red: #D9383A;
+  
+  --font-heading: 'Manrope', 'Inter', -apple-system, sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+@layer base {
+  :root {
+    --primary-dark: #17212B;
+    --brand-orange: #E85D2A;
+    --brand-orange-hover: #D04E1D;
+    --page-bg: #F5F5F2;
+    --surface: #FFFFFF;
+    --text-main: #20252B;
+    --text-muted: #69727C;
+    --border-subtle: #E2E5E8;
+    --retail-green: #237A4B;
+  }
+
+  body {
+    background-color: #F5F5F2;
+    color: #20252B;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', 'Inter', -apple-system, sans-serif;
+    color: #20252B;
+  }
+}
+
+/* Custom scrollbars */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f2f0;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd0d6;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #9aa1a9;
+}
+
+/* Print styles for reports */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .print-break-inside {
+    break-inside: avoid;
+  }
+  .print-shadow-none {
+    box-shadow: none !important;
+    border: 1px solid #e2e8f0 !important;
+  }
+}
